@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_specialties">
+
+    <fragment
+        android:id="@+id/navigation_specialties"
+        android:name="com.kotlintesttask.ui.specialty.SpecialtyFragment"
+        android:label="@string/title_specialty_list"
+        tools:layout="@layout/fragment_specialty">
+        <action
+            android:id="@+id/action_navigation_specialties_to_navigation_workers"
+            app:destination="@id/navigation_workers" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workers"
+        android:name="com.kotlintesttask.ui.worker.WorkerFragment"
+        android:label="@string/title_workers_list"
+        tools:layout="@layout/fragment_worker">
+        <action
+            android:id="@+id/action_navigation_workers_to_navigation_worker_details"
+            app:destination="@id/navigation_worker_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_worker_details"
+        android:name="com.kotlintesttask.ui.worker.details.WorkerDetailsFragment"
+        android:label="@string/title_worker"
+        tools:layout="@layout/fragment_worker_details" />
+
+</navigation>

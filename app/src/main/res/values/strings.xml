@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">KotlinTestTask</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_specialty">Specialty</string>
+    <string name="title_specialties">Специальности</string>
+    <string name="title_specialty_list">Список специальностей</string>
+    <string name="title_fullname">Full Name</string>
+    <string name="title_age">24 y</string>
+    <string name="title_workers">Работники</string>
+    <string name="title_worker">Работник</string>
+    <string name="title_workers_list">Список работников</string>
+    <string name="title_birthday">23.11.1994</string>
+    <string name="no_internet_available">Интернет соединение не найдено</string>
+</resources>
