@@ -49,15 +49,11 @@ class SpecialtyFragment : Fragment(), SpecialtyAdapter.OnSpecialtyClickListener 
         viewModel.getResponse().observe(viewLifecycleOwner, Observer { resp ->
             mLoadingPb.showLoading(false)
             if (resp != null) {
-                val workers = resp.response
-                val specialties: ArrayList<SpecialtyModel> = arrayListOf()
-                for (worker in workers) {
-                    for (specialty in worker.specialty)
-                        specialties.add(specialty)
-                }
+                val specialties = resp.response.flatMap {
+                    it.specialty
+                }.distinct()
 
-                val distinctSpecialties = specialties.distinct()
-                displaySpecialties(distinctSpecialties)
+                displaySpecialties(specialties)
             }
         })
     }
